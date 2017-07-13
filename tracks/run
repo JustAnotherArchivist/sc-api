@@ -1,0 +1,25 @@
+#!/bin/bash
+TZ=UTC ~/.local/bin/wpull \
+	'https://api.soundcloud.com/tracks?client_id=2t9loNQH90kzJcsFCODdigxfp325aq4z&app_version=1499947877&limit=200&ids=0' \
+	--recursive --level inf \
+	--warc-append --warc-file soundcloud-api-tracks --warc-max-size 2147483648 \
+	--no-parent \
+	--no-robots \
+	--no-check-certificate \
+	--user-agent 'Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0' \
+	--concurrent 20 \
+	--wait 0.5 --random-wait --waitretry 600 \
+	--escaped-fragment \
+	--strip-session-id \
+	--tries 3 \
+	--retry-connrefused \
+	--retry-dns-error \
+	--timeout 60 \
+	--session-timeout 21600 \
+	--delete-after \
+	--database soundcloud-api-tracks.db \
+	--no-verbose \
+	--output-file soundcloud-api-tracks.log \
+	--python-script hook.py \
+	--plugin-script plugin.py \
+	--accept-regex '^https://api\.soundcloud\.com/tracks\?client_id=2t9loNQH90kzJcsFCODdigxfp325aq4z&app_version=1499947877&limit=200&ids=\d+(,\d+)*$'
