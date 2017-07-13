@@ -21,7 +21,7 @@ URLs:
 	* Retrieving multiple profiles at once is possible as well (undocumented): `https://api.soundcloud.com/users?client_id=2t9loNQH90kzJcsFCODdigxfp325aq4z&app_version=1499947877&ids=311984582,311984583`. Same `&limit` as for `/tracks`, i.e. add `&limit=200` for maximum efficiency.
 	* There are various subresources: tracks, playlists, comments, favourites, followers, followings (people the person is following), web profiles. See official docs.
 
-The maximum IDs as of 2017-07-07 are below 333M, 337M, and 319M for tracks, playlists, and users, respectively.
+The maximum IDs as of 2017-07-14 are below 334M, 338M, and 320M for tracks, playlists, and users, respectively.
 
 # Misc
 * "All requests that result in access to a playable stream are subject to a limit of 15,000 requests per any 24-hour time window."
