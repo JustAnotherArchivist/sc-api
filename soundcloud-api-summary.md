@@ -3,7 +3,7 @@ The API's terms of service ban everything we want to do, so we'll have to use an
 URLs:
 
 * Track info: `https://api.soundcloud.com/tracks/318511652?client_id=2t9loNQH90kzJcsFCODdigxfp325aq4z&app_version=1499947877`
-	* You can also retrieve multiple tracks at once: `https://api.soundcloud.com/tracks?client_id=2t9loNQH90kzJcsFCODdigxfp325aq4z&app_version=1499947877&ids=311984582,311984583,311984584`. This seems to return up to 50 results.
+	* You can also retrieve multiple tracks at once: `https://api.soundcloud.com/tracks?client_id=2t9loNQH90kzJcsFCODdigxfp325aq4z&app_version=1499947877&ids=311984582,311984583,311984584`. By adding `&limit=200` (or any higher value), you get up to 200 results (default: 50).
 	* Track comments: `https://api.soundcloud.com/tracks/318511652/comments?threaded=1&client_id=2t9loNQH90kzJcsFCODdigxfp325aq4z&limit=20&offset=0&linked_partitioning=1&app_version=1499947877`
 	* Track "favoriters" (people who marked a track as a favourite): `https://api.soundcloud.com/tracks/318511652/favoriters?client_id=2t9loNQH90kzJcsFCODdigxfp325aq4z&app_version=1499947877`
 	* Undocumented subresources requested by the browser when accessing a track page:
@@ -18,7 +18,7 @@ URLs:
 * Playlists: `https://api.soundcloud.com/playlists/308952747?representation=full&client_id=2t9loNQH90kzJcsFCODdigxfp325aq4z&app_version=1499947877`
 	* Possibly with `representation=id` to get only the IDs, not the full track details. `compact` is useless in our case. (`full` isn't in the official docs.)
 * User: `https://api.soundcloud.com/users/311984582?client_id=2t9loNQH90kzJcsFCODdigxfp325aq4z&app_version=1499947877`
-	* Retrieving multiple profiles at once is possible as well (undocumented): `https://api.soundcloud.com/users?client_id=2t9loNQH90kzJcsFCODdigxfp325aq4z&app_version=1499947877&ids=311984582,311984583`. Seems to have the same limit of 50 results as `/tracks`.
+	* Retrieving multiple profiles at once is possible as well (undocumented): `https://api.soundcloud.com/users?client_id=2t9loNQH90kzJcsFCODdigxfp325aq4z&app_version=1499947877&ids=311984582,311984583`. Same `&limit` as for `/tracks`, i.e. add `&limit=200` for maximum efficiency.
 	* There are various subresources: tracks, playlists, comments, favourites, followers, followings (people the person is following), web profiles. See official docs.
 
 The maximum IDs as of 2017-07-07 are below 333M, 337M, and 319M for tracks, playlists, and users, respectively.
