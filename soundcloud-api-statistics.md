@@ -3,7 +3,7 @@ The following table lists the number of tracks, their cumulative duration, an es
 <!--
 | From ID | To ID | Number of tracks | Duration | Stream size | Download size |
 |---|---|---|---|---|---|
-| 1 | 27.9M | 139633 | 3147517310682 ms | 50360276960000 | 137590393185905 |
+| 1 | 27.9M | 7365468 | 3147517310682 ms | 50360276960000 | 137590393185905 |
 | 27.9M | 52.3M | 7446996 | 2644745617728 ms | 42315929872000 | 122941239142282 |
 | 52.3M | 74.8M | 7415742 | 2511823757137 ms | 40189180112000 | 115300350559087 |
 | 74.8M | 95.7M | 7467899 | 2628177856925 ms | 42050845696000 | 120228970390786 |
@@ -18,7 +18,7 @@ The following table lists the number of tracks, their cumulative duration, an es
 
 | From ID | To ID | Number of tracks | Duration | Stream size | Download size |
 |---|---|---|---|---|---|
-| 1 | 27.9M | 0.14M | 874 kh | 45.8 TiB | 125.1 TiB |
+| 1 | 27.9M | 7.37M | 874 kh | 45.8 TiB | 125.1 TiB |
 | 27.9M | 52.3M | 7.45M | 735 kh | 38.5 TiB | 111.8 TiB |
 | 52.3M | 74.8M | 7.42M | 698 kh | 36.6 TiB | 104.9 TiB |
 | 74.8M | 95.7M | 7.47M | 730 kh | 38.2 TiB | 109.3 TiB |
