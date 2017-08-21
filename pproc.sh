@@ -20,3 +20,8 @@ function tosize { if [[ $1 -gt $((1024*1024*1024*1024*1024)) ]]; then echo "$(ec
 # Size of WARCs in GiB
 echo "scale=3; $(du -B 1048576 -c tracks/*.warc.gz | tail -1 | awk '{ print $1 }') / 1024" | bc
 echo "scale=3; $(du -B 1048576 -c users/*.warc.gz | tail -1 | awk '{ print $1 }') / 1024" | bc
+
+# Find gzip records at the end of a WARC to quickly have a look at those WARC records (without having to decompress the entire file)
+tail -c1000000 soundcloud-api-tracks-00000.warc.gz | LANG=C grep -obUaP $'\x1f\x8b'
+# Example output line: '984241:�', so:
+tail -c1000000 soundcloud-api-tracks-00000.warc.gz | tail -c+984242 | zless
