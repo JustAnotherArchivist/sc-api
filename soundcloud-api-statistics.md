@@ -50,5 +50,5 @@ The following table lists the number of tracks, their cumulative duration, an es
 
 Remarks:
 * The range limits (first two columns) are only approximate numbers.
-* This data was derived without  `grep`, `sed`, and `awk` rather than properly parsing the JSON, so it may have errors.
+* This data was derived with `grep`, `sed`, and `awk` rather than properly parsing the JSON, so it may have errors.
 * The "download size" includes tracks which are not downloadable. I currently don't have a way to filter these out.
